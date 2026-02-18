@@ -1,0 +1,184 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Ocean Life Guardians - Ocean Conservation Donation Website",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create homepage introducing ocean conservation mission with compelling visuals and messaging",
+      "acceptanceCriteria": [
+        "Homepage displays clear mission statement about protecting sea animals and fish",
+        "Visually engaging layout that communicates urgency of ocean conservation",
+        "Navigation to other key sections of the site"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create homepage component featuring the hero banner image (frontend/public/assets/generated/hero-ocean.dim_1920x600.png), mission statement about protecting marine life, and navigation to information and donation sections. Include ocean-themed styling with blues and teals."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Home page component into the application routing, setting it as the default route at '/'. Ensure proper navigation structure for the ocean conservation site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build information section educating visitors about marine life threats and ocean ecosystems",
+      "acceptanceCriteria": [
+        "Content sections describing ocean conservation challenges",
+        "Information about endangered sea animals and fish",
+        "Educational content about marine ecosystems"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Conservation.tsx",
+          "operation": "create",
+          "description": "Create conservation information page with educational content about threats to marine life, endangered species, and ocean ecosystem importance. Include sections describing conservation challenges and the urgency of protecting sea animals and fish."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for the Conservation page at '/conservation' and include navigation link in the main navigation structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement donation form for contributing to ocean conservation efforts",
+      "acceptanceCriteria": [
+        "Donation form with preset amount options",
+        "Custom amount input field",
+        "Clear call-to-action buttons for donation submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DonationForm.tsx",
+          "operation": "create",
+          "description": "Create donation form component with preset amount buttons (e.g., $25, $50, $100), custom amount input field, donor name field, optional message field, and prominent submit button. Use shadcn-ui components for form elements. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/Donate.tsx",
+          "operation": "create",
+          "description": "Create donation page that hosts the DonationForm component with ocean-themed styling and messaging about supporting marine life conservation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for the Donate page at '/donate' and include prominent navigation link in the main navigation structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Display showcase of sea animals and marine species benefiting from conservation donations",
+      "acceptanceCriteria": [
+        "Gallery or cards showing various sea animals and fish",
+        "Brief descriptions of each species and conservation status",
+        "Visual presentation of marine life diversity"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MarineLifeGallery.tsx",
+          "operation": "create",
+          "description": "Create gallery component displaying marine species cards using generated images: frontend/public/assets/generated/sea-turtle.dim_800x600.png, frontend/public/assets/generated/coral-reef.dim_800x600.png, frontend/public/assets/generated/dolphins.dim_800x600.png, and frontend/public/assets/generated/whale.dim_800x600.png. Each card includes species image, name, and conservation status description. Use shadcn-ui card components. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Integrate the MarineLifeGallery component into the homepage to showcase sea animals and fish that benefit from conservation efforts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Integrate donation form with backend to submit and confirm donation transactions",
+      "acceptanceCriteria": [
+        "Form submission sends donation data to backend canister",
+        "Success confirmation displayed to user after donation",
+        "Error handling for failed submissions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useDonation.ts",
+          "operation": "create",
+          "description": "Create custom hook for handling donation submissions. Call backend.recordDonation() with donor name, amount, and message. Return loading state, error state, and success state. Use the core-infrastructure component to connect to the backend. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/DonationForm.tsx",
+          "operation": "modify",
+          "description": "Integrate useDonation hook to submit form data to backend. Handle form validation, display loading state during submission, show success message with confirmation after successful donation, and display error messages for failed submissions."
+        },
+        {
+          "path": "frontend/src/pages/DonationSuccess.tsx",
+          "operation": "create",
+          "description": "Create success page displaying donation confirmation message, thanking donor for supporting marine life conservation, and providing navigation back to homepage."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for DonationSuccess page at '/donate/success' to display after successful donation submission."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply cohesive ocean-themed visual design with marine-inspired colors and wave-like design elements",
+      "acceptanceCriteria": [
+        "Consistent color palette inspired by ocean and marine life",
+        "Typography and spacing that supports readability and theme",
+        "Design elements that reinforce ocean conservation message"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define ocean-themed color palette using CSS custom properties (blues: #0077BE, #1E90FF, teals: #008B8B, #20B2AA, aqua greens: #00CED1, #7FFFD4). Add global typography rules for readability and marine conservation theme. Include base styling for wave-like design elements."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with ocean-inspired color palette (ocean-blue, teal, aqua-green shades), custom spacing for fluid layouts, and typography settings that support the marine conservation theme. Configure design tokens for consistent ocean aesthetic throughout the application."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout component wrapping all pages with consistent header navigation, ocean-themed styling, and footer. Include the conservation icon (frontend/public/assets/generated/conservation-icon.dim_256x256.png) in the header or footer. Apply wave-like decorative elements and marine color scheme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with the Layout component to ensure consistent ocean-themed design across all pages of the website."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Render generated ocean and marine life images as static assets from frontend/public/assets/generated",
+      "acceptanceCriteria": [
+        "Generated images are loaded from frontend/public/assets/generated",
+        "Images display correctly in relevant sections",
+        "Proper image paths and references throughout the application"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Ensure hero banner references frontend/public/assets/generated/hero-ocean.dim_1920x600.png using proper asset path. Verify image loads correctly and displays prominently in the homepage hero section."
+        },
+        {
+          "path": "frontend/src/components/MarineLifeGallery.tsx",
+          "operation": "modify",
+          "description": "Verify all marine life images reference correct paths: frontend/public/assets/generated/sea-turtle.dim_800x600.png, frontend/public/assets/generated/coral-reef.dim_800x600.png, frontend/public/assets/generated/dolphins.dim_800x600.png, and frontend/public/assets/generated/whale.dim_800x600.png. Ensure images display correctly in gallery cards."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Verify conservation icon references frontend/public/assets/generated/conservation-icon.dim_256x256.png and displays correctly in header or footer navigation."
+        }
+      ]
+    }
+  ]
+}

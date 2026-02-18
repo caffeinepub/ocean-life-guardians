@@ -1,0 +1,144 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-that-introduces-the-mission-of-protecting-marine-life-and-sea-animals-with-compelling-visuals-and-messaging-about-ocean-conservation",
+      "featureTitle": "Create a homepage that introduces the mission of protecting marine life and sea animals, with compelling visuals and messaging about ocean conservation",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-information-section-that-educates-visitors-about-threats-to-marine-life-endangered-sea-animals-and-the-importance-of-ocean-ecosystems",
+      "featureTitle": "Build an information section that educates visitors about threats to marine life, endangered sea animals, and the importance of ocean ecosystems",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Conservation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-donation-form-where-users-can-select-donation-amounts-and-contribute-to-ocean-conservation-efforts",
+      "featureTitle": "Implement a donation form where users can select donation amounts and contribute to ocean conservation efforts",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DonationForm.tsx",
+        "frontend/src/pages/Donate.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-a-showcase-of-sea-animals-and-marine-species-that-benefit-from-conservation-donations-with-images-and-descriptions",
+      "featureTitle": "Display a showcase of sea animals and marine species that benefit from conservation donations, with images and descriptions",
+      "files": [
+        "frontend/src/components/MarineLifeGallery.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-donation-form-with-backend-to-submit-and-confirm-donation-transactions",
+      "featureTitle": "Integrate donation form with backend to submit and confirm donation transactions",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DonationForm.tsx",
+        "frontend/src/hooks/useDonation.ts",
+        "frontend/src/pages/DonationSuccess.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-ocean-themed-visual-design-throughout-the-website-with-marine-inspired-colors-ocean-blues-teals-aqua-greens-fluid-typography-and-wave-like-design-elements-that-evoke-underwater-environments-and-marine-conservation",
+      "featureTitle": "Apply a cohesive ocean-themed visual design throughout the website with marine-inspired colors (ocean blues, teals, aqua greens), fluid typography, and wave-like design elements that evoke underwater environments and marine conservation",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-generated-ocean-and-marine-life-images-as-static-assets-in-frontend-public-assets-generated-directory",
+      "featureTitle": "Render generated ocean and marine life images as static assets in frontend/public/assets/generated directory",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/MarineLifeGallery.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

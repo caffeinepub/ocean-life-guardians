@@ -1,0 +1,152 @@
+{
+  "kind": "build_request",
+  "title": "Create ocean conservation donation website",
+  "projectName": "Ocean Life Guardians",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage that introduces the mission of protecting marine life and sea animals, with compelling visuals and messaging about ocean conservation",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage displays clear mission statement about protecting sea animals and fish",
+        "Visually engaging layout that communicates urgency of ocean conservation",
+        "Navigation to other key sections of the site"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build an information section that educates visitors about threats to marine life, endangered sea animals, and the importance of ocean ecosystems",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Content sections describing ocean conservation challenges",
+        "Information about endangered sea animals and fish",
+        "Educational content about marine ecosystems"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a donation form where users can select donation amounts and contribute to ocean conservation efforts",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Donation form with preset amount options",
+        "Custom amount input field",
+        "Clear call-to-action buttons for donation submission"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create backend actor methods to record donation information including donor details and donation amounts for marine life conservation",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Store donation records with amount and timestamp",
+        "Query methods to retrieve donation statistics",
+        "Data persistence across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Display a showcase of sea animals and marine species that benefit from conservation donations, with images and descriptions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery or cards showing various sea animals and fish",
+        "Brief descriptions of each species and conservation status",
+        "Visual presentation of marine life diversity"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Integrate donation form with backend to submit and confirm donation transactions",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form submission sends donation data to backend canister",
+        "Success confirmation displayed to user after donation",
+        "Error handling for failed submissions"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a cohesive ocean-themed visual design throughout the website with marine-inspired colors (ocean blues, teals, aqua greens), fluid typography, and wave-like design elements that evoke underwater environments and marine conservation",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consistent color palette inspired by ocean and marine life",
+        "Typography and spacing that supports readability and theme",
+        "Design elements that reinforce ocean conservation message"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Render generated ocean and marine life images as static assets in frontend/public/assets/generated directory",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are loaded from frontend/public/assets/generated",
+        "Images display correctly in relevant sections",
+        "Proper image paths and references throughout the application"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must use React with TypeScript for frontend",
+    "Must use Motoko for backend canister",
+    "All backend logic in single main actor file",
+    "Generated images must be stored in frontend/public/assets/generated"
+  ],
+  "nonGoals": [
+    "Real payment processing integration with Stripe or other providers",
+    "User authentication system",
+    "Admin dashboard for managing donations",
+    "Email notifications for donors",
+    "Multi-language support"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Hero banner featuring underwater ocean scene with diverse marine life including fish, sea turtles, and coral reefs in vibrant blues and greens (hero-ocean.dim_1920x600.png)",
+      "Illustration of sea turtle swimming in ocean waters (sea-turtle.dim_800x600.png)",
+      "Illustration of colorful coral reef ecosystem with tropical fish (coral-reef.dim_800x600.png)",
+      "Illustration of dolphin pod in open ocean (dolphins.dim_800x600.png)",
+      "Illustration of whale swimming in deep ocean (whale.dim_800x600.png)",
+      "Ocean conservation icon with wave and fish symbol (conservation-icon.dim_256x256.png)"
+    ],
+    "edits": []
+  }
+}

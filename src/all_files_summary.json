@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko actor defining a Donation type and two public functions: recordDonation to add donations to a list with validation, and getDonations to query all donations as an array.",
+  "feature_evidence.json": "Feature evidence report documenting five implemented features including homepage, conservation education section, donation form, marine life showcase, and backend integration with high confidence ratings.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of 12 frontend files covering styling, routing, pages, components, and hooks for the ocean conservation donation application.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color variables for light and dark modes, defining ocean-themed design tokens for backgrounds, borders, and UI elements.",
+  "frontend/index.html": "HTML entry point with UTF-8 charset, viewport meta tag, title 'Ocean Life Guardians', and script loading the React app from main.tsx.",
+  "frontend/src/App.tsx": "TanStack Router setup defining routes for Home, Conservation, Donate, and DonationSuccess pages, all wrapped in a Layout component via root route.",
+  "frontend/src/components/DonationForm.tsx": "Donation form component with preset and custom amount selection, donor name and message inputs, validation, and submission handling via useDonation hook with navigation to success page.",
+  "frontend/src/components/Layout.tsx": "Layout component with sticky header containing logo, desktop/mobile navigation, donate button, and footer with branding and mission statement.",
+  "frontend/src/components/MarineLifeGallery.tsx": "Gallery component displaying four marine species cards (sea turtles, coral reefs, dolphins, whales) with images, conservation status badges, and threat descriptions.",
+  "frontend/src/hooks/useActor.ts": "React Query hook managing backend actor creation with Internet Identity authentication, returning authenticated or anonymous actor and invalidating dependent queries on identity changes.",
+  "frontend/src/hooks/useDonation.ts": "Custom React hook that manages donation submission state, calls the backend actor's recordDonation method, and handles errors and loading states.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context and hooks for ICP, managing login/logout flow, identity state, and AuthClient lifecycle with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook that fetches donations list from the backend actor, with proper dependency management on actor availability.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom ocean-themed color palette for light/dark modes, typography setup using Poppins and Inter fonts, and wave divider component styling.",
+  "frontend/src/main.tsx": "Application entry point that sets up React root with QueryClient and InternetIdentityProvider wrappers around the main App component.",
+  "frontend/src/pages/Conservation.tsx": "Conservation information page displaying ocean threats (climate change, pollution, overfishing) and solutions (protected areas, reef restoration, sustainable fishing) with icon-based grid layouts.",
+  "frontend/src/pages/Donate.tsx": "Donation page featuring a hero section, DonationForm component, impact tiers ($25/$50/$100), and trust/transparency messaging about how donations are used.",
+  "frontend/src/pages/DonationSuccess.tsx": "Success confirmation page shown after donation completion, displaying thank you message, impact description, and navigation buttons to return home or learn more.",
+  "frontend/src/pages/Home.tsx": "Homepage component featuring a hero section with ocean imagery, mission statement with three value cards (Ocean Conservation, Wildlife Protection, Shield icon section), and a MarineLifeGallery component. Includes navigation buttons to /donate and /conservation routes.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration with custom ocean-themed design tokens using OKLCH color space, custom animations (accordion, wave), ocean shadow utility, and extended theme including sidebar, chart, and card color variants.",
+  "project_state.json": "Project state tracking document for an ocean conservation donation website, listing 7 completed features (homepage, education section, donation form, marine species showcase, backend integration, ocean-themed design, static image assets) and 2 pending feature requests."
+}

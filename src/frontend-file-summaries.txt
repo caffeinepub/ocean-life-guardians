@@ -1,0 +1,14 @@
+{
+  "frontend/src/index.css": "Global styles with ocean-themed OKLCH color system for light and dark modes, custom wave divider component, and Google Fonts imports for Poppins and Inter.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with ocean-inspired color palette, custom shadows, wave animations, and typography settings for the marine conservation theme.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for Home, Conservation, Donate, and DonationSuccess pages wrapped in Layout component.",
+  "frontend/src/components/Layout.tsx": "Reusable layout component with sticky header navigation, mobile menu, ocean-themed branding with conservation icon, and footer with attribution and mission statement.",
+  "frontend/src/pages/Home.tsx": "Homepage featuring hero section with ocean banner image, mission statement, marine life gallery showcase, and call-to-action sections for ocean conservation.",
+  "frontend/src/pages/Conservation.tsx": "Educational page detailing ocean conservation challenges, threats to marine life, conservation solutions, and impact of supporting ocean protection efforts.",
+  "frontend/src/pages/Donate.tsx": "Donation page hosting the donation form component with impact information showing how different donation amounts help marine conservation.",
+  "frontend/src/pages/DonationSuccess.tsx": "Success confirmation page displayed after donation submission, thanking donors and providing navigation back to main sections.",
+  "frontend/src/components/DonationForm.tsx": "Interactive donation form with preset amount buttons, custom amount input, donor information fields, form validation, and backend integration for submitting donations.",
+  "frontend/src/components/MarineLifeGallery.tsx": "Gallery component displaying cards for sea turtles, coral reefs, dolphins, and whales with images, conservation status badges, and species descriptions.",
+  "frontend/src/hooks/useDonation.ts": "Custom hook managing donation submission logic, connecting to backend recordDonation method with loading and error state management.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching donation data from the backend using the getDonations query method."
+}
